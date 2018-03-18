@@ -12,7 +12,7 @@ angular.module('logview',[
 	
 	// directives
 	require('./components/nav-bar/nav-bar.directive').name,
-	require('./components/search-options/search-options.directive').name
+	require('./components/search-options/search-options.directive').name,
 
 	// routes
 	require('./routes/home/home.route').name,

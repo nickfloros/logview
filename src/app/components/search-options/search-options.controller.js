@@ -2,7 +2,7 @@ require('angular');
 var _=require('lodash');
 
 module.exports=angular.module('search-options-controller-module',[
-		require('../../services/search.service').name,
+		require('../../services/ui-search.service').name,
 	]).controller('searchOptionsController',['SearchService', function SearchOptionsController(SearchService){
 		var ctrl = this,
 			_options = ['Road', 'Junctions'];

@@ -3,19 +3,19 @@ require('angular');
 var _=require('lodash');
 
 module.exports = angular.module('home-controller-module',[
-	
+		require('../../services/ui-search.service').name
 	])
-	.controller('homeController',['$rootScope',function ($rootScope){
+	.controller('homeController',['$rootScope','UiSearchService',function ($rootScope, UiSearchService){
 
-		var ctrl = this,
-			_road = '';
-
+		var ctrl = this;
+		
 		_.extend(ctrl,{
 			init : function () {
 			},
-			road : (...args) => {
-				return args.length > 0 ? _road = args[0] : _road;
-			},
+			payload : SearchService.payload,
+			dateStart : SearchService.dateStart,
+			dateEnd : SearchService.dateEnd,
+			search : SearchService.search,
 			searchRoad : ()=> {
 				console.log(_road);
 			},

@@ -24,7 +24,7 @@
   "dependencies": {
     "angular": "*",
     "angular-ui-bootstrap": "*",
-    "angular-ui-router": "*",
+    "angular-ui-router": "0.4.3",
     "bootstrap": "^3.3.6",
     "json-formatter-js": "^2.2.0",
     "jsonformatter": "^0.6.0",

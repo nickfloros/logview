@@ -2,15 +2,23 @@ var _ = require('lodash');
 
 require('angular');
 
-module.exports = angular.module('home-route-module', [])
-	.config(['$stateProvider', '$urlRouterProvider', function HomeCondif($stateProvider, $urlRouterProvider) {
+module.exports = angular.module('home-route-module', [
+		require('./home.controller').name
+	])
+	.config(['$stateProvider', '$urlRouterProvider', 'homeController'function HomeCondif($stateProvider,
+		$urlRouterProvider, homeController) {
 		$urlRouterProvider.otherwise('/home');
 
 		$stateProvider.state('home', {
 			url: '/home',
 			views: {
+				search: {
+					templateUrl: "partials/home.template.html",
+					controller: 'homeController',
+					controllerAs: 'ctrl'
+				},
 				panel: {
-					templateUrl: "partials/home.template.html"
+					templateUrl:"partils/results-ui-logs.template.html"	
 				}
 			}
 		});

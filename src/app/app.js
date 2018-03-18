@@ -6,9 +6,15 @@ const uiBootstrap = require('angular-ui-bootstrap'),
 angular.module('logview',[
 	uiBootstrap,
 	uiRouter,
-	// routes
-	require('./routes/home/home.route').name,
+
+	// services 
+	
+	
 	// directives
 	require('./components/nav-bar/nav-bar.directive').name,
 	require('./components/search-options/search-options.directive').name
+
+	// routes
+	require('./routes/home/home.route').name,
+
 	]);

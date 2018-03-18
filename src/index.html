@@ -1,0 +1,36 @@
+<!doctype html>
+<html ng-app="logview">
+
+<head>
+    <meta http-equiv="content-type" content="text/html">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initia-scale=-1, maximum-scale=1">
+		<script type="text/javascript" src="js/app.js"></script>
+		<script type="text/javascript" src="js/templates.js"></script>
+		
+		<!-- add bootstrap -->
+		<link rel="stylesheet" type="text/css" href="styles/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="styles/project-styles.css">
+		<link rel="stylesheet" type="text/css" href="styles/styles.css">
+
+</head>
+
+<title>Logviewer</title>
+
+<body>
+    <nav-bar></nav-bar>
+    <div class="container-fluid" id="main">
+        <div class="row">
+            <div class="col-xs-4" style="overflow-y:auto" id="left">
+                <div ui-view="search">
+                </div>
+            </div>
+            <div class="col-xs-8" style="height: inherit;">
+                <div ui-view="results">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

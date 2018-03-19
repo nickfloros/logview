@@ -19,6 +19,7 @@ module.exports = angular.module('res-search-service-module', [])
 			payload: (...args) => {
 				return arguments.length > 0 ? _payload = val : _payload;
 			},
+			
 			results: ()=>{
 				return _results;
 			},
@@ -28,6 +29,7 @@ module.exports = angular.module('res-search-service-module', [])
 				_dateEnd = new Date(_dateStart.setHours(_dateStart.getHours() - 1));
 			},
 			search: () => {
+				console.log('about to search');
 			}
 		});
 

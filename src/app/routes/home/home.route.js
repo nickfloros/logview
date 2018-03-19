@@ -1,24 +1,24 @@
-var _ = require('lodash');
+const _ = require('lodash');
 
 require('angular');
 
 module.exports = angular.module('home-route-module', [
-		require('./home.controller').name
+		require('../search/ui-logs/search-ui-logs.controller').name
 	])
-	.config(['$stateProvider', '$urlRouterProvider', 'homeController', function HomeCondif($stateProvider,
-		$urlRouterProvider, homeController) {
+	.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider,
+		$urlRouterProvider) {
 		$urlRouterProvider.otherwise('/home');
 
 		$stateProvider.state('home', {
-			url: '/',
+			url: '/home',
 			views: {
 				search: {
-					templateUrl: "partials/home.template.html",
-					controller: 'homeController',
+					templateUrl: "partials/search-ui-logs.template.html",
+					controller: 'searchUiLogsController',
 					controllerAs: 'ctrl'
 				},
 				panel: {
-					templateUrl:"partils/results-ui-logs.template.html"	
+					templateUrl:"partials/results-ui-logs.template.html"	
 				}
 			}
 		});

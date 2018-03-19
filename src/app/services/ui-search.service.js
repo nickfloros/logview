@@ -9,15 +9,15 @@ module.exports = angular.module('ui-search-service-module', [])
 			_dateStart = new Date(),
 			_dateEnd = new Date(_dateStart.setHours(_dateStart.getHours() - 1));
 
-		_export(_svc, {
+		_.extend(_svc, {
 			dateStart: (...args) => {
 				return args.length > 0 ? _dateStart = args[0] : _dateStart;
 			},
 			dateEnd: (...args) => {
-				return args.length > 0 ? _dateEnd = val : _dateEnd;
+				return args.length > 0 ? _dateEnd = args[0] : _dateEnd;
 			},
 			payload: (...args) => {
-				return arguments.length > 0 ? _payload = val : _payload;
+				return args.length > 0 ? _payload = args[0] : _payload;
 			},
 			results: ()=>{
 				return _results;

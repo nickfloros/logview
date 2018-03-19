@@ -1,19 +1,38 @@
-<h2>Log search</h2>
+<h3>Log search</h3>
 <div class="form-horizontal">
   <div class="form-group">
-      <label for="resLng" class="col-xs-2 control-label">Search term</label>
-      <div class="col-xs-10">
+      <label for="resLng" class="col-xs-4 control-label">Operator id</label>
+      <div class="col-xs-8">
+          <input name="payload" type="text" class="form-control" ng-model="ctrl.operatorId" required ng-model-options="ctrl.modelOptions"/>
+      </div>
+  </div>  
+    <div class="form-group">
+      <label for="resLng" class="col-xs-4 control-label">User nane</label>
+      <div class="col-xs-8">
+          <input name="payload" type="text" class="form-control" ng-model="ctrl.userName" required ng-model-options="ctrl.modelOptions"/>
+      </div>
+  </div>  
+  <div class="form-group">
+      <label for="resLng" class="col-xs-4 control-label">Search term</label>
+      <div class="col-xs-8">
           <input name="payload" type="text" class="form-control" ng-model="ctrl.payload" required ng-model-options="ctrl.modelOptions"/>
       </div>
   </div>
-<div class="form-group">
-      <label for="resLng" class="col-xs-2 control-label">From</label>
-      <div class="col-xs-10">
-          <input name="payload" type="date" class="form-control" ng-model="ctrl.dateStart" ng-model-options="ctrl.modelOptions"/>
+  <div class="form-group">
+      <label for="resLng" class="col-xs-4 control-label">From</label>
+      <div class="col-xs-8">
+          <input name="dateStart" type="datetime-local" class="form-control" ng-model="ctrl.dateStart" ng-model-options="ctrl.modelOptions"/>
       </div>
   </div>
   <div class="form-group">
-      <div class="col-xs-offset-2 col-xs-10">
+      <label for="resLng" class="col-xs-4 control-label">From</label>
+      <div class="col-xs-8">
+          <input name="dateEnd" type="datetime-local" class="form-control" ng-model="ctrl.dateEnd" ng-model-options="ctrl.modelOptions"/>
+      </div>
+  </div>
+
+  <div class="form-group">
+      <div class="col-xs-offset-9 col-xs-3">
           <button class="btn btn-success" ng-click="ctrl.search()">Search</button>
       </div>
   </div>

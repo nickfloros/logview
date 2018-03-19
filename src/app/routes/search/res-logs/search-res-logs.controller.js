@@ -2,22 +2,21 @@ require('angular');
 
 const _ = require('lodash');
 
-module.exports = angular.module('search-ui-logs-controller.module', [
+module.exports = angular.module('search-res-logs-controller.module', [
 		require('../../../services/ui-search.service').name
 	])
-	.controller('searchUiLogsController', ['UiSearchService', function(UiSearchService) {
+	.controller('searchResLogsController', ['ResSearchService', function(UiSearchService) {
 
 		const ctrl = this;
 		
 		_.extend(ctrl, {
 			init: function() {},
-			operatorId : UiSearchService.operatorId,
-			userName : UiSearchService.userName,
 			payload : UiSearchService.payload,
 			dateStart : UiSearchService.dateStart,
+			dateEnd : UiSearchService.dateEnd,
 			search : ()=>{
 				UiSearchService.clean(); // remove old results;
-				UiSearchService.search();
+				UiSearchService.resSearch();
 			},
 			modelOptions: {
 				getterSetter: true
